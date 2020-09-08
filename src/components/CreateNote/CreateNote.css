@@ -1,0 +1,24 @@
+.createNote {
+  margin: 0 auto;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px 40px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+}
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.createNote .form-btn {
+  margin-top: 8px;
+}
+
+.createNote select {
+  text-transform: capitalize;
+}
+
+.createNote select option {
+  text-transform: capitalize;
+}

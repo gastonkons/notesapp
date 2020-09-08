@@ -1,0 +1,113 @@
+.content {
+  width: 100%;
+  max-width: 1024px;
+  min-height: calc(100vh - 140px);
+  margin: 30px auto;
+  padding: 0 10px;
+}
+
+.createUser {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.createUser-form {
+  grid-column: 1 / 5;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px 40px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+}
+
+.createUser-list {
+  grid-column: 5 / 13;
+  padding: 20px 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.05);
+}
+
+.createUser-list-ul {
+  list-style-type: none;
+}
+
+.createUser-list-li {
+  padding: 10px;
+  background: #dfdfdf;
+  border: 1px solid #ccc;
+  color: #333;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  transition: all 300ms ease;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.createUser-list-icon {
+  height: 25px;
+  width: 25px;
+  content: "";
+  background-image: url("../../assets/images/papelera.png");
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.createUser-list-li:hover,
+.createUser-list-li:nth-child(2n):hover {
+  background: #333;
+  color: #fff;
+}
+
+.createUser-list-li:hover .createUser-list-icon {
+  background: #ccc;
+  border-radius: 5px;
+  background-image: url("../../assets/images/papelera.png");
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.createUser-list-li:nth-child(2n) {
+  background: #efefef;
+}
+
+.form-btn {
+  width: 100%;
+  margin: 20px 0 10px 0;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.form-btn:hover {
+  opacity: 0.8;
+}
+
+.form-message {
+  color: #f00;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+  .createUser-form,
+  .createUser-list {
+    grid-column: 1 / 13;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,112 @@
+.notesList {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px 40px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.05);
+}
+
+.notesList-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: max-content;
+  gap: 30px;
+  align-content: center;
+}
+
+.notesList-note {
+  padding: 0;
+  background: #eee;
+  border-radius: 10px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.note-header {
+  padding: 15px;
+  font-weight: 600;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.note-body {
+  padding: 10px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.note-footer {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.note-content {
+  padding: 10px 0;
+}
+
+.note-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.note-author::before {
+  content: "User: ";
+  font-weight: 400;
+}
+
+.note-author {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.note-date {
+  font-size: 0.9rem;
+}
+
+.note-footer button {
+  padding: 6px 10px;
+
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 400;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.note-footer button:hover {
+  opacity: 0.8;
+}
+
+button.note-delete {
+  background: #fff;
+  color: #333;
+}
+
+button.note-edit {
+  background: #333;
+  color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  .notesList-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .notesList-grid {
+    grid-template-columns: 1fr;
+  }
+}
