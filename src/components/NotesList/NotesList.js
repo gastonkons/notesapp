@@ -3,6 +3,7 @@ import axios from "axios";
 import "./NotesList.css";
 import { Link } from "react-router-dom";
 import { format } from "timeago.js";
+import { confirmAlert } from "react-confirm-alert";
 
 function NotesList() {
   const [notes, setNotes] = useState([]);
@@ -27,10 +28,26 @@ function NotesList() {
     fetchNotes();
   };
 
+  const confirmDeleteNote = (id) => {
+    confirmAlert({
+      message: "Are you sure you want to delete it?",
+      buttons: [
+        {
+          label: "No",
+          onClick: () => {},
+        },
+        {
+          label: "Yes, I want to",
+          onClick: () => deleteNote(id),
+        },
+      ],
+    });
+  };
+
   return (
     <div className="content">
       <div className="notesList">
-        <h3 className="title">Notes list</h3>
+        <h3 className="title">Notes</h3>
         <main className="notesList-grid">
           {notes.map((note) => (
             <div className="notesList-note" key={note._id}>
@@ -47,7 +64,7 @@ function NotesList() {
               <div className="note-footer">
                 <button
                   className="note-delete"
-                  onClick={() => deleteNote(note._id)}
+                  onClick={() => confirmDeleteNote(note._id)}
                 >
                   Delete
                 </button>
