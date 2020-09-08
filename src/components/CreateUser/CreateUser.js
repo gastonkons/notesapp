@@ -11,7 +11,7 @@ function CreateUser() {
   const [username, setUsername] = useState("");
   const [loading, setLoading] = useState(true);
   const [statusRes, setStatusRes] = useState(false);
-  const URL = "http://localhost:4000/api";
+  const URL = "https://safe-scrubland-91703.herokuapp.com/api";
 
   useEffect(() => {
     async function fetchData() {

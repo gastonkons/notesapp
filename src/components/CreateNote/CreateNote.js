@@ -15,7 +15,7 @@ function CreateNote(props) {
   const [editing, setEditing] = useState(false);
   const [noteId, setNoteId] = useState("");
 
-  const URL = "http://localhost:4000/api";
+  const URL = "https://safe-scrubland-91703.herokuapp.com/api";
   let history = useHistory();
 
   useEffect(() => {

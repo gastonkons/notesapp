@@ -6,7 +6,7 @@ import { format } from "timeago.js";
 
 function NotesList() {
   const [notes, setNotes] = useState([]);
-  const URL = "http://localhost:4000/api";
+  const URL = "https://safe-scrubland-91703.herokuapp.com/api";
 
   const fetchNotes = async () => {
     const res = await axios
