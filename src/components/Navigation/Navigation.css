@@ -4,7 +4,6 @@
   overflow: hidden;
   background: #333;
   color: #fff;
-  top: 0;
 }
 
 .navbar a {
@@ -33,7 +32,7 @@
   display: none;
   cursor: pointer;
   position: relative;
-  z-index: 2;
+  z-index: 11;
   margin: 0 20px;
   padding: 20px;
   font-size: 2rem;
@@ -69,8 +68,23 @@
 }
 
 @media screen and (max-width: 800px) {
-  .navbar-btn {
+  .navbar .navbar-btn {
     display: block;
+    background: transparent;
+    border: 0;
+    outline: none;
+    outline-color: transparent;
+    outline-style: none;
+  }
+
+  .navbar-btn:visited,
+  .navbar-btn:focus,
+  .navbar-btn:link,
+  .navbar .navbar-btn:active,
+  .navbar .navbar-btn:focus {
+    background: transparent;
+    outline-color: transparent;
+    outline-style: none;
   }
 
   .navbar-nav {
@@ -80,6 +94,7 @@
     right: 0%;
     max-height: 50vh;
     background: #333;
+    border-bottom-left-radius: 20px;
     transition: all 1s ease;
     z-index: 10;
   }

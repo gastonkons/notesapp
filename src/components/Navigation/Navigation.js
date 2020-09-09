@@ -29,9 +29,9 @@ function Navigation() {
             NotesApp
           </Link>
         </div>
-        <span className="navbar-btn" onClick={() => handleMenu("button")}>
+        <button className="navbar-btn" onClick={() => handleMenu("button")}>
           {">"}
-        </span>
+        </button>
         <div className="navbar-nav">
           <ul>
             <li>

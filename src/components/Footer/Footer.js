@@ -4,7 +4,17 @@ import "./Footer.css";
 function Footer() {
   return (
     <div className="footer">
-      Made by <span>@gastonkons</span>
+      Made by{" "}
+      <span>
+        {" "}
+        <a
+          href="https://gastonkons.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @gastonkons
+        </a>
+      </span>
     </div>
   );
 }

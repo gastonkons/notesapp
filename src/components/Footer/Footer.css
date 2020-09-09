@@ -8,3 +8,8 @@
 .footer span {
   font-weight: 600;
 }
+
+.footer a {
+  text-decoration: none;
+  color: #ccc;
+}
